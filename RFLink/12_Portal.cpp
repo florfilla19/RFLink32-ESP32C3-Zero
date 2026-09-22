@@ -353,7 +353,7 @@ namespace RFLink { namespace Portal {
         void serveIndexHtml(AsyncWebServerRequest *request) {
           if(!checkHttpAuthentication(request))
             return;
-          AsyncWebServerResponse *response = request->beginResponse_P(200, F("text/html"), index_html_gz_start, index_html_gz_size);
+          AsyncWebServerResponse *response = request->beginResponse(200, F("text/html"), index_html_gz_start, index_html_gz_size);
           response->addHeader(F("Content-Encoding"), F("gzip"));
           request->send(response);
         }
