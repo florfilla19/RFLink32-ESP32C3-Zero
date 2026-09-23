@@ -113,7 +113,11 @@ namespace RFLink {
     };
 
     namespace params {
+       #ifdef RFLINK_SERIAL2NET_ENABLED_BY_DEFAULT
+      bool enabled = true;
+      #else
       bool enabled = false;
+      #endif
       unsigned int port;
     }
 
@@ -122,7 +126,11 @@ namespace RFLink {
     const char json_name_port[] = "port";
 
     Config::ConfigItem configItems[] = {
+            #ifdef RFLINK_SERIAL2NET_ENABLED_BY_DEFAULT
+            Config::ConfigItem(json_name_enabled, Config::SectionId::Serial2Net_id, true, paramsUpdatedCallback),
+            #else
             Config::ConfigItem(json_name_enabled, Config::SectionId::Serial2Net_id, false, paramsUpdatedCallback),
+            #endif
             Config::ConfigItem(json_name_port, Config::SectionId::Serial2Net_id, SERIAL2NET_PORT,
                                paramsUpdatedCallback),
             Config::ConfigItem()};
