@@ -1,0 +1,19 @@
+# Arduino Library Development file
+.development
+
+# Atom
+*.tags
+*.tags1
+
+# VS Code
+.vscode
+
+# Jetbrain IDEs
+.idea
+
+# Debug decoder
+extras/decoder/log.txt
+extras/decoder/out.txt
+
+# PlatformIO
+.pio*

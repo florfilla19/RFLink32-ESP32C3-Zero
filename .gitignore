@@ -1,8 +1,0 @@
-.idea
-.pio
-.vscode
-pictures/Full size/
-RFLink/*.ino
-cmake-build-*
-CMakeLists.txt
-CMakeListsPrivate.txt

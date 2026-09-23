@@ -1,0 +1,10 @@
+esp32async/ESPAsyncWebServer @ ~3.6.0
+PubSubClient
+U8g2
+https://github.com/florfilla19/rflink-webui.git#main
+esp32async/AsyncTCP @ ~3.3.2
+jgromes/RadioLib @ ~5.6
+Wire
+ArduinoJson@~6.18.5
+https://github.com/boblemaire/asyncHTTPrequest.git#master
+Update
